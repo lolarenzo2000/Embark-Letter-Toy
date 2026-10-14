@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './three';
 import { OrbitControls } from './three/addons/controls/OrbitControls.js';
 import { FBXLoader } from './three/addons/loaders/FBXLoader.js';
 
@@ -36,7 +36,7 @@ scene.add( floor );
 
 // modelo letras
 const fLoader = new FBXLoader();
-const e = await fLoader.loadAsync( 'models/letters/e.fbx' );
+const e = await fLoader.loadAsync( './models/letters/e.fbx' );
 e.scale.setScalar( 0.01 );
 e.traverse( ( child ) => {
   if ( child.isMesh ) {
