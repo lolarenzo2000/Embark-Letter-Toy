@@ -34,9 +34,23 @@ floor.scale.setScalar( 200 );
 floor.receiveShadow = true;
 scene.add( floor );
 
-// modelo letras
 const fLoader = new FBXLoader();
 
+
+//logo
+const logo = await fLoader.loadAsync('./models/letters/logo.fbx')
+logo.scale.setScalar(0.01);
+logo.traverse((child) => {
+  if (child.isMesh){
+    child.castShadow = true;
+    child.receiveShadow = true;
+  }
+});
+logo.position.x = -7;
+scene.add( logo )
+
+
+// modelo letras
 const e = await fLoader.loadAsync( './models/letters/e.fbx' );
 e.scale.setScalar( 0.01 );
 e.traverse( ( child ) => {
