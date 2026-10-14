@@ -8,7 +8,7 @@
 **Curiosidad:**
 - 'What if', que tal si, hacer las cosas diferentes impulsa a encontrar nuevos caminos.
 - "The future belongs to the curious", (*El futuro le perteneze a los curiosos*) la curiosidad y la creatividad impulsa hacia un futuro mejor.
-- La creatividad conyeba riesgos, pero tambien recompensas.
+- La creatividad y curiosidad conyeba riesgos, pero tambien recompensas.
 - Embark, embarcar en un viaje
 
 ---
