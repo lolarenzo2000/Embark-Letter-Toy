@@ -1,6 +1,6 @@
-import * as THREE from './three';
-import { OrbitControls } from './three/addons/controls/OrbitControls.js';
-import { FBXLoader } from './three/addons/loaders/FBXLoader.js';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -36,6 +36,7 @@ scene.add( floor );
 
 // modelo letras
 const fLoader = new FBXLoader();
+
 const e = await fLoader.loadAsync( './models/letters/e.fbx' );
 e.scale.setScalar( 0.01 );
 e.traverse( ( child ) => {
@@ -44,7 +45,64 @@ e.traverse( ( child ) => {
     child.receiveShadow = true;
   }
 } );
+e.position.x = -4.8;
 scene.add( e );
+
+const m = await fLoader.loadAsync( './models/letters/m.fbx' );
+m.scale.setScalar( 0.01 );
+m.traverse( ( child ) => {
+  if ( child.isMesh ) {
+    child.castShadow = true;
+    child.receiveShadow = true;
+  }
+} );
+m.position.x = -2.8;
+scene.add( m );
+
+const b = await fLoader.loadAsync( './models/letters/b.fbx' );
+b.scale.setScalar( 0.01 );
+b.traverse( ( child ) => {
+  if ( child.isMesh ) {
+    child.castShadow = true;
+    child.receiveShadow = true;
+  }
+} );
+b.position.x = -0.9;
+scene.add( b );
+
+
+const a = await fLoader.loadAsync( './models/letters/a.fbx' );
+a.scale.setScalar( 0.01 );
+a.traverse( ( child ) => {
+  if ( child.isMesh ) {
+    child.castShadow = true;
+    child.receiveShadow = true;
+  }
+} );
+a.position.x = 0.8;
+scene.add( a );
+
+const r = await fLoader.loadAsync( './models/letters/r.fbx' );
+r.scale.setScalar( 0.01 );
+r.traverse( ( child ) => {
+  if ( child.isMesh ) {
+    child.castShadow = true;
+    child.receiveShadow = true;
+  }
+} );
+r.position.x = 2;
+scene.add( r );
+
+const k = await fLoader.loadAsync( './models/letters/k.fbx' );
+k.scale.setScalar( 0.01 );
+k.traverse( ( child ) => {
+  if ( child.isMesh ) {
+    child.castShadow = true;
+    child.receiveShadow = true;
+  }
+} );
+k.position.x = 3.2;
+scene.add( k );
 
 // control de cámara
 const controls = new OrbitControls( camera, renderer.domElement );
