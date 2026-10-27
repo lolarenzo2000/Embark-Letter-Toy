@@ -1,0 +1,33 @@
+html,body{margin:0;height:100%;overflow:hidden;background:#05070d;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#fff}
+canvas{display:block}
+
+#fileWarn{display:none;position:fixed;inset:0;z-index:50;background:#05070d;align-items:center;justify-content:center;text-align:center;padding:30px;line-height:1.8;font-size:16px}
+#loading{position:fixed;inset:0;z-index:40;background:#05070d;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;font-size:12px;letter-spacing:.3em;transition:opacity .6s}
+#loadingTrack{width:220px;height:3px;background:rgba(255,255,255,.15)}
+#loadingBar{height:100%;width:0;background:#ffd34d;transition:width .2s}
+#missing{display:none;position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:30;max-width:90vw;font-size:11px;color:#ffb199;text-align:center;opacity:.9}
+
+#intro{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:9vh;pointer-events:none;transition:opacity 1s}
+#name{font-size:clamp(36px,8vw,92px);letter-spacing:.35em;font-weight:800;margin-right:-.35em;pointer-events:auto;cursor:pointer;text-shadow:0 0 30px rgba(255,211,77,.45)}
+#prompt{margin-top:18px;font-size:14px;letter-spacing:.25em;opacity:.7;animation:pulse 2s infinite;text-transform:uppercase}
+#hint2{margin-top:6px;font-size:12px;opacity:.35}
+@keyframes pulse{50%{opacity:.25}}
+
+#hud{position:fixed;inset:0;pointer-events:none;opacity:0;transition:opacity .8s}
+#lvl{position:absolute;top:18px;left:22px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;opacity:.75}
+#letters{position:absolute;top:14px;left:50%;transform:translateX(-50%);display:flex;gap:10px}
+#letters span{width:38px;height:48px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;border:1px solid rgba(255,255,255,.25);border-radius:6px;color:rgba(255,255,255,.2);transition:all .5s}
+#letters span.on{color:#ffd34d;border-color:#ffd34d;box-shadow:0 0 16px rgba(255,211,77,.6)}
+#signalWrap{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:240px;text-align:center;font-size:11px;letter-spacing:.25em;opacity:.8}
+#signalBar{height:4px;margin-top:6px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden}
+#signal{height:100%;width:0;background:linear-gradient(90deg,#4dd0ff,#ffd34d)}
+#help{position:absolute;bottom:26px;right:22px;font-size:11px;opacity:.5;text-align:right;line-height:1.6}
+#toast{position:absolute;top:38%;left:50%;transform:translateX(-50%);font-size:clamp(20px,4vw,40px);font-weight:700;letter-spacing:.2em;opacity:0;transition:opacity .6s;text-align:center;text-shadow:0 0 20px rgba(0,0,0,.8)}
+
+#end{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:12vh;opacity:0;pointer-events:none;transition:opacity 2s}
+#endName{font-size:clamp(30px,6vw,70px);font-weight:800;letter-spacing:.35em;margin-right:-.35em;color:#ffd34d;text-shadow:0 0 28px rgba(255,211,77,.6)}
+#slogan{margin-top:20px;font-size:clamp(16px,2.6vw,28px);letter-spacing:.18em;text-transform:uppercase;opacity:0;transition:opacity 3s 1.5s}
+#end.show{opacity:1;pointer-events:auto}
+#end.show #slogan{opacity:1}
+#replay{margin-top:28px;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;padding:10px 26px;letter-spacing:.2em;cursor:pointer;border-radius:4px;font-size:12px}
+#replay:hover{background:rgba(255,255,255,.1)}

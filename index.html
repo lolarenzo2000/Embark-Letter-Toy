@@ -1,22 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>embark</title>
-    <style>
-      body { margin: 0; }
-    </style>
-  </head>
-  <body>
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
-          }
-        }
-    </script>
-    <script type="module" src="./main.js"></script>
-  </body>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curiosity Voyage</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<div id="loading"><div>CARGANDO MODELOS</div><div id="loadingTrack"><div id="loadingBar"></div></div></div>
+<div id="missing"></div>
+
+<div id="intro">
+  <div id="name"></div>
+  <div id="prompt">Toca el logo · pulsa Enter · o escribe el código</div>
+  <div id="hint2">pista: lo que te mueve es la misma palabra que el juego premia</div>
+</div>
+<div id="hud">
+  <div id="lvl"></div>
+  <div id="letters"></div>
+  <div id="toast"></div>
+  <div id="signalWrap">SEÑAL<div id="signalBar"><div id="signal"></div></div></div>
+  <div id="help">W / S acelerar · A / D girar<br>Espacio / Shift subir · bajar (avión y nave)</div>
+</div>
+<div id="end">
+  <div id="endName"></div>
+  <div id="slogan"></div>
+  <button id="replay">JUGAR DE NUEVO</button>
+</div>
+
+<script type="module" src="/src/js/main.js"></script>
+</body>
 </html>
-    
