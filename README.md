@@ -1,5 +1,6 @@
 # Unidad 7
-Embark
+<img width="1000" height="494" alt="image" src="https://github.com/user-attachments/assets/53a4d542-1f18-4bcd-b71f-5ddc5ec410f8" />
+
 ## Atributo
 Curiosidad:
 
@@ -35,3 +36,14 @@ La curiosidad impulsa el juego, encontrar nuevas cosas impulsa la curiosidad, y 
 - Resolución tipográfica y experiencia de juego: la composición, el ritmo, los momentos de lectura y las respuestas perceptibles permiten explorar el sistema y sostienen su intención. [25] Me parece que si, aunque aveces siento que pasa algo rapido.
 
 ## Musica utilizada en el juego
+[The Wanderer (Prologue)](https://music.youtube.com/watch?v=9US1z3K8r9s&list=OLAK5uy_kqmECeo_VuHUD3C_h5Tk_3B3jDH4WZEJo)
+
+
+[Abandoned Cities](https://music.youtube.com/watch?v=D4AOn7CJ00A&list=OLAK5uy_kqmECeo_VuHUD3C_h5Tk_3B3jDH4WZEJo)
+
+
+[The new world](https://music.youtube.com/watch?v=QSUhUuWxjQs&list=OLAK5uy_kqmECeo_VuHUD3C_h5Tk_3B3jDH4WZEJo)
+
+
+
+[ARC Invasion](https://music.youtube.com/watch?v=a4n5Y435ZUc&list=OLAK5uy_kqmECeo_VuHUD3C_h5Tk_3B3jDH4WZEJo)
