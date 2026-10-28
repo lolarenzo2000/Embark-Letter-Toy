@@ -4,6 +4,20 @@ export const $ = id => document.getElementById(id);
 export const rand = (a, b) => a + Math.random() * (b - a);
 export const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
+export const MATTE_RED = new THREE.MeshStandardMaterial({
+  color: 0xc62828,
+  roughness: 1,
+  metalness: 0,
+  side: THREE.DoubleSide
+});
+
+export function applyMatteRed(root) {
+  root.traverse(object => {
+    if (object.isMesh) object.material = MATTE_RED;
+  });
+  return root;
+}
+
 export const mat = (c, e = 0) =>
   new THREE.MeshStandardMaterial({ color: c, roughness: .5, metalness: .3, emissive: c, emissiveIntensity: e });
 

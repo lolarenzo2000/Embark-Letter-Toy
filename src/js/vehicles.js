@@ -1,9 +1,10 @@
 import * as THREE from 'three';
-import { mat } from './utils.js';
+import { applyMatteRed, mat } from './utils.js';
 
-/* Vehículos (miran hacia +z). Para usar modelos propios, reemplaza estas
-   funciones por loaders FBX igual que en models.js. */
-export function makeVehicle(type) {
+/* Modelos FBX si están disponibles; las geometrías sirven como reemplazo temporal. */
+export function makeVehicle(type, assets, offset = [0, 0, 0]) {
+  if (assets.vehicles[type]) return applyMatteRed(assets.vehicles[type].clone(true));
+
   const g = new THREE.Group();
   if (type === 'boat') {
     const hull = new THREE.Mesh(new THREE.BoxGeometry(1.6, .7, 4), mat(0xb5532f));
@@ -32,5 +33,6 @@ export function makeVehicle(type) {
     const eng = new THREE.Mesh(new THREE.SphereGeometry(.55, 12, 12), mat(0x4dd0ff, 2)); eng.position.z = -1.7;
     g.add(body, eng);
   }
-  return g;
+  g.position.set(...offset);
+  return applyMatteRed(g);
 }

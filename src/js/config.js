@@ -5,8 +5,8 @@
    - logo.fbx                 → el logo
    - letters/E.fbx, M.fbx ... → una letra por archivo, nombrada con la letra
 
-   size      → tamaño máximo (en unidades del juego) al que se escala el modelo.
-               Se escala y centra solo, no importa en qué unidades lo exportaste.
+  size      → tamaño objetivo (en unidades del juego) para normalizar el modelo.
+  fit       → 'height' para igualar la altura de las letras; por defecto ajusta la dimensión mayor.
    rotation  → [x, y, z] en GRADOS para corregir la orientación del modelo
                (por ejemplo [-90, 0, 0] si tu FBX viene acostado). */
 const BASE = import.meta.env.BASE_URL;
@@ -16,12 +16,40 @@ export const CONFIG = {
   slogan: 'The future is for the curious',
   code: 'CURIOUS',               // código para empezar desde la pantalla de inicio
 
+  audio: {
+    // Agrega varias rutas; se reproducen aleatoriamente, sin repetir la anterior.
+    music: [
+      BASE + 'assets/audio/music/Wanderer.mp3',
+      BASE + 'assets/audio/music/NewWorld.mp3',
+      BASE + 'assets/audio/music/AbandonedCities.mp3'
+    ],
+    finalMusic: BASE + 'assets/audio/music/ARCInvasion.mp3',
+    finalFadeDuration: 2,
+    sounds: {
+      // Asigna un archivo distinto para cada evento.
+      start: '',
+      collect: '',
+      levelTransition: '',
+      win: ''
+    },
+    musicVolume: .35,
+    soundVolume: .85,
+    duckFactor: .3
+  },
+
   models: {
     logo: { url: BASE + 'assets/models/logo.fbx', size: 4, rotation: [0, 0, 0] },
-    letters: { dir: BASE + 'assets/models/letters/', ext: '.fbx', size: 5, rotation: [0, 0, 0] }
+    letters: { dir: BASE + 'assets/models/letters/', ext: '.fbx', size: 5, fit: 'height', scale: { B: 1.2, K: 1.2 }, rotation: [0, 0, 0] },
+    vehicles: {
+      boat: { url: BASE + 'assets/models/boat.fbx', size: 6, rotation: [0, 0, 0], offset: [0, 2, 0] },
+      plane: { url: BASE + 'assets/models/plane.fbx', size: 7, rotation: [0, 180, 0] },
+      ship: { url: BASE + 'assets/models/ship.fbx', size: 5, rotation: [0,180, 0] }
+    }
   },
 
   collectRadius: 7,             // qué tan cerca hay que pasar para recoger una letra
+  letterSpacing: 500,
+  letterPlayerClearance: 400,
 
   // `letters` son índices del nombre: 0=E 1=M 2=B 3=A 4=R 5=K
   levels: [
